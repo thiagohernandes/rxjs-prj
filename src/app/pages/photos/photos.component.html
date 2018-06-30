@@ -1,0 +1,25 @@
+<div>
+  <span *ngIf="loading === true">
+      <img width="80" height="80" src="assets\images\loading.gif"><br/>
+      <label>Aguarde...</label>
+  </span>
+
+  <span *ngIf="messageError">Problemas ao carregar os dados!<br/>
+    Código do erro: {{messageError.status}}
+  </span>
+
+  <span *ngIf="loading === false && !messageError">
+      <table>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Thumbnail URL</th>
+          </tr>
+          <tr *ngFor="let photo of _photosData">
+            <td>{{photo.id}}</td>
+            <td>{{photo.title}}</td>
+            <td><img src="{{photo.thumbnailUrl}}"></td>
+          </tr>
+      </table>
+  </span>
+</div>

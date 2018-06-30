@@ -2,15 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { PhotosComponent } from './pages/photos/photos.component';
+import { HttpFakeService } from './services/http-fake.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PhotosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    HttpFakeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

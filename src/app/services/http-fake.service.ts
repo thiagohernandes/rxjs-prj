@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, tap, filter } from 'rxjs/operators';
 import { IPhoto } from '../interfaces/photo-interface';
 import { Observable } from 'rxjs';
 
@@ -14,7 +14,6 @@ export class HttpFakeService {
   constructor(private http: HttpClient) { }
 
   getAllPhotos(): Observable<IPhoto[]> {
-    return this.http.get<IPhoto[]>(this._urlFakePhotos)
-                    .pipe();
+    return this.http.get<IPhoto[]>(this._urlFakePhotos);
   }
 }

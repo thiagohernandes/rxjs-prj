@@ -6,11 +6,13 @@ import { AppRoutingModule } from './/app-routing.module';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { HttpFakeService } from './services/http-fake.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RxjsExComponent } from './pages/rxjs-ex/rxjs-ex.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotosComponent
+    PhotosComponent,
+    RxjsExComponent
   ],
   imports: [
     BrowserModule,

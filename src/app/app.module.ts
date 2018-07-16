@@ -8,13 +8,15 @@ import { HttpFakeService } from './services/http-fake.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RxjsExComponent } from './pages/rxjs-ex/rxjs-ex.component';
 import { LearningComponent } from './pages/learning/learning.component';
+import { Learning2Component } from './pages/learning2/learning2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhotosComponent,
     RxjsExComponent,
-    LearningComponent
+    LearningComponent,
+    Learning2Component
   ],
   imports: [
     BrowserModule,

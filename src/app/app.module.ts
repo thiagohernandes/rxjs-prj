@@ -9,6 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { RxjsExComponent } from './pages/rxjs-ex/rxjs-ex.component';
 import { LearningComponent } from './pages/learning/learning.component';
 import { Learning2Component } from './pages/learning2/learning2.component';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,12 +19,14 @@ import { Learning2Component } from './pages/learning2/learning2.component';
     PhotosComponent,
     RxjsExComponent,
     LearningComponent,
-    Learning2Component
+    Learning2Component,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     HttpFakeService

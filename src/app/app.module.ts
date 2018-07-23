@@ -12,6 +12,7 @@ import { Learning2Component } from './pages/learning2/learning2.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownModule } from 'ngx-dropdown';
+import { NgdebouncetimeComponent } from './pages/ngdebouncetime/ngdebouncetime.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DropdownModule } from 'ngx-dropdown';
     RxjsExComponent,
     LearningComponent,
     Learning2Component,
-    MessagesComponent
+    MessagesComponent,
+    NgdebouncetimeComponent
   ],
   imports: [
     BrowserModule,

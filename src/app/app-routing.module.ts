@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { MessagesComponent } from './pages/messages/messages.component';
+import { NgdebouncetimeComponent } from './pages/ngdebouncetime/ngdebouncetime.component';
 
 
 const routes: Routes = [
     //{ path: '', redirectTo: '/app-photos', pathMatch: 'full' },
     // { path: '', redirectTo: '/app-rxjs-ex', pathMatch: 'full' },
     //{ path: '', redirectTo: '/app-learning', pathMatch: 'full' },
-    { path: '', redirectTo: '/app-messages', pathMatch: 'full' },
+    { path: '', redirectTo: 'app-ngdebouncetime', pathMatch: 'full' },
+    { path: 'app-ngdebouncetime', component: NgdebouncetimeComponent},
     { path: 'app-messages', component: MessagesComponent},
     { path: 'app-learning2', component: Learning2Component},
     { path: 'app-photos', component: PhotosComponent},

@@ -11,18 +11,34 @@ import { FormsModule } from '@angular/forms'; // ngModule
 export class MessagesComponent implements OnInit, OnDestroy {
 
   message: any;
+  nomeFromObservable: any;
   subscription: Subscription;
+  subscriptionNomes: Subscription;
   public texto: any;
+  public nome: string;
 
   constructor(private messageService: MessagesService) {
       // subscribe to home component messages
       this.subscription = this.messageService.getMessage()
                                              .subscribe(message => { this.message = message.text; });
+
   }
 
   ngOnInit() {
+    this.subscriptionNomes = this.messageService.getNome()
+                                                .subscribe(nome => { this.nomeFromObservable = nome; });
+
   }
 
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.subscription.unsubscribe();
+    this.subscriptionNomes.unsubscribe();
+}
+
+  // ***************************************************
+  //  Observable Messages
+  // ***************************************************
   sendMessage(msg): void {
     // send message to subscribers via observable subject
     this.messageService.sendMessage(msg);
@@ -33,9 +49,18 @@ export class MessagesComponent implements OnInit, OnDestroy {
       this.messageService.clearMessage();
   }
 
-  ngOnDestroy() {
-      // unsubscribe to ensure no memory leaks
-      this.subscription.unsubscribe();
+  // ***************************************************
+  //  Observable Nome
+  // ***************************************************
+
+  sendNome(nome): void {
+    // send nome to subscribers via observable subject
+    this.messageService.sendNome(nome);
+  }
+
+  clearNome(): void {
+      // clear nome
+      this.messageService.clearNome();
   }
 
 }

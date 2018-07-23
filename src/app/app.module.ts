@@ -11,6 +11,7 @@ import { LearningComponent } from './pages/learning/learning.component';
 import { Learning2Component } from './pages/learning2/learning2.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DropdownModule } from 'ngx-dropdown';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    DropdownModule
   ],
   providers: [
     HttpFakeService

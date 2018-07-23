@@ -1,0 +1,11 @@
+<div style="text-align: center">
+  <input type="text" [(ngModel)]="texto"><br/>
+  <button (click)="sendMessage(texto)"> Enviar msg </button>
+  Mensagem: {{message}}
+</div>
+<div style="text-align: center">
+  <input type="text" [(ngModel)]="nome"><br/>
+  <button (click)="sendNome(nome)"> Enviar nome </button>
+  Mensagem: {{nomeFromObservable}}
+</div>
+

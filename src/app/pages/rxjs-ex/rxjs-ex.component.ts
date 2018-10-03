@@ -3,6 +3,7 @@ import { concat, delay, mapTo, startWith, scan } from 'rxjs/operators';
 import { of } from 'rxjs/internal/observable/of';
 import { interval } from 'rxjs/internal/observable/interval';
 import { merge } from 'rxjs/internal/observable/merge';
+import { Funcoes } from '../../classes/funcoes';
 
 @Component({
   selector: 'app-rxjs-ex',
@@ -14,7 +15,7 @@ export class RxjsExComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.exemploStartWithCounter();
+    this.funcaoTesteUm();
   }
 
   exemploConcat() {
@@ -85,6 +86,21 @@ export class RxjsExComponent implements OnInit {
     // output: -3, -2, -1, 0, 1, 2....
     const subscribe = example.subscribe(val => console.log(val));
   }
+
+  exemploMapUm() {
+    const evens = [2, 4, 6, 8];
+    const odds = evens.map(v => v + 1);
+    odds.forEach(i => {
+      console.log(i);
+    });
+  }
+
+   funcaoTesteUm() {
+     const func = new Funcoes('Greeting!');
+     const sizeString = func.sizeString('Greeting!');
+     console.log(sizeString);
+   }
+
 
 
 }

@@ -11,7 +11,6 @@ import { LearningComponent } from './pages/learning/learning.component';
 import { Learning2Component } from './pages/learning2/learning2.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DropdownModule } from 'ngx-dropdown';
 import { NgdebouncetimeComponent } from './pages/ngdebouncetime/ngdebouncetime.component';
 
 
@@ -30,8 +29,8 @@ import { NgdebouncetimeComponent } from './pages/ngdebouncetime/ngdebouncetime.c
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    DropdownModule
-  ],
+    ReactiveFormsModule
+    ],
   providers: [
     HttpFakeService
   ],

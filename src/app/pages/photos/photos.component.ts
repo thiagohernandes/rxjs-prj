@@ -22,8 +22,9 @@ export class PhotosComponent implements OnInit {
     this._photosService
         .getAllPhotos()
         .subscribe(response => {
-                      // this._photosData = response.slice(0, 100);
-                      this._photosData = response.filter(valor => valor.id <= 100 && valor.id % 2 === 0);
+                   //   this._photosData = response.slice(0, 100);
+                      this._photosData = response;
+                    //   this._photosData = response.filter(valor => valor.id <= 100 && valor.id % 2 === 0);
                       this.loading = false;
                       const source = from([1, 2, 3, 4, 5]);
                       // add 10 to each value

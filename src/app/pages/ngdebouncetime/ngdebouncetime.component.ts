@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
-import { fromEvent } from 'rxjs/observable/fromEvent';
 import { map, debounceTime } from 'rxjs/operators';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-ngdebouncetime',

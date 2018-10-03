@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent } from 'rxjs/observable/fromEvent';
 import { map } from 'rxjs/operators';
-import { Subject } from '../../../../node_modules/rxjs';
+import { Subject, fromEvent } from '../../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-learning2',

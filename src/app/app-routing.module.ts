@@ -9,10 +9,8 @@ import { NgdebouncetimeComponent } from './pages/ngdebouncetime/ngdebouncetime.c
 
 
 const routes: Routes = [
-    //{ path: '', redirectTo: '/app-photos', pathMatch: 'full' },
-    // { path: '', redirectTo: '/app-rxjs-ex', pathMatch: 'full' },
-    //{ path: '', redirectTo: '/app-learning', pathMatch: 'full' },
-    { path: '', redirectTo: 'app-ngdebouncetime', pathMatch: 'full' },
+    { path: '', redirectTo: 'app-photos', pathMatch: 'full' },
+
     { path: 'app-ngdebouncetime', component: NgdebouncetimeComponent},
     { path: 'app-messages', component: MessagesComponent},
     { path: 'app-learning2', component: Learning2Component},
